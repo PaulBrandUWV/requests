@@ -155,3 +155,25 @@ def delete(url, **kwargs):
     """
 
     return request("delete", url, **kwargs)
+
+def connect(url, **kwargs):
+    r"""Sends a CONNECT request.
+
+    :param url: URL for the new :class:`Request` object.
+    :param \*\*kwargs: Optional arguments that ``request`` takes.
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
+    """
+
+    return request("connect", url, **kwargs)
+
+def trace(url, **kwargs):
+    r"""Sends a TRACE request.
+
+    :param url: URL for the new :class:`Request` object.
+    :param \*\*kwargs: Optional arguments that ``request`` takes.
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
+    """
+
+    return request("trace", url, **kwargs)

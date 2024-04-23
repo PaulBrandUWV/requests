@@ -670,6 +670,26 @@ class Session(SessionRedirectMixin):
 
         return self.request("DELETE", url, **kwargs)
 
+    def connect(self, url, **kwargs):
+        r"""Sends a CONNECT request. Returns :class:`Response` object.
+
+        :param url: URL for the new :class:`Request` object.
+        :param \*\*kwargs: Optional arguments that ``request`` takes.
+        :rtype: requests.Response
+        """
+
+        return self.request("CONNECT", url, **kwargs)
+
+    def trace(self, url, **kwargs):
+        r"""Sends a TRACE request. Returns :class:`Response` object.
+
+        :param url: URL for the new :class:`Request` object.
+        :param \*\*kwargs: Optional arguments that ``request`` takes.
+        :rtype: requests.Response
+        """
+
+        return self.request("TRACE", url, **kwargs)
+
     def send(self, request, **kwargs):
         """Send a given PreparedRequest.
 
